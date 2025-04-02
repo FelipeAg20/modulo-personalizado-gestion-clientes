@@ -1,0 +1,31 @@
+# Evita archivos de sistema de Windows y macOS
+.DS_Store
+Thumbs.db
+
+# Evita archivos temporales de Python y compilados
+*.pyc
+*.pyo
+*.pyd
+__pycache__
+
+# Evita configuraciones de entorno
+.env
+*.log
+addons/txt
+# Evita bases de datos locales y cachés de Odoo
+*.db
+*.db-shm
+*.db-wal
+*.session
+*.zip
+*.dump
+
+# Evita dependencias innecesarias de Odoo
+addons/.git/
+addons/*/.git/
+addons/*/.gitignore
+
+# Evita carpetas de Odoo.sh locales
+venv/
+.odoo/
+.venv/

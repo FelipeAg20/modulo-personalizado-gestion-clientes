@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- 📌 Vista tipo Tree (lista) -->
+    <record id="view_employee_custom_tree" model="ir.ui.view">
+        <field name="name">employee.custom.tree</field>
+        <field name="model">hr.employee.custom</field>
+        <field name="arch" type="xml">
+            <tree string="Empleados">
+                <field name="name"/>
+                <field name="job_position"/>
+                <field name="department"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- 📌 Vista tipo Form (formulario) -->
+    <record id="view_employee_custom_form" model="ir.ui.view">
+        <field name="name">employee.custom.form</field>
+        <field name="model">hr.employee.custom</field>
+        <field name="arch" type="xml">
+            <form string="Empleado">
+                <sheet>
+                    <group>
+                        <field name="photo" widget="image"/>
+                        <field name="name"/>
+                        <field name="job_position"/>
+                        <field name="department"/>
+                        <field name="salary"/>
+                        <field name="hire_date"/>
+                        <field name="active"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- 📌 Acción de ventana (para abrir la vista) -->
+    <record id="action_hr_employee_custom" model="ir.actions.act_window">
+        <field name="name">Empleados</field>
+        <field name="res_model">hr.employee.custom</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_employee_custom_tree"/>  <!-- Asegura que usa la vista correcta -->
+    </record>
+
+    <!-- 📌 Menú principal -->
+    <menuitem id="menu_hr_custom_root" name="Empleados Personalizados"/>
+
+    <!-- 📌 Submenú de empleados -->
+    <menuitem id="menu_hr_custom" name="Empleados" parent="menu_hr_custom_root" sequence="10"/>
+
+    <!-- 📌 Opción en el menú que ejecuta la acción -->
+    <menuitem id="menu_hr_employee_custom" name="Lista de Empleados" parent="menu_hr_custom" action="action_hr_employee_custom" sequence="10"/>
+</odoo>
