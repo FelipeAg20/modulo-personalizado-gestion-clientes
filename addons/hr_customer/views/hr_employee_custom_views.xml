@@ -5,12 +5,12 @@
         <field name="name">employee.custom.tree</field>
         <field name="model">hr.employee.custom</field>
         <field name="arch" type="xml">
-            <tree string="Empleados">
+            <list string="Empleados">
                 <field name="name"/>
                 <field name="job_position"/>
                 <field name="department"/>
                 <field name="active"/>
-            </tree>
+            </list>
         </field>
     </record>
 
