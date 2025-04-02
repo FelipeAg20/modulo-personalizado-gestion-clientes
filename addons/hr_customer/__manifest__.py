@@ -1,7 +1,7 @@
 {
     'name': 'Gestión de Empleados Personalizada',
     'version': '1.0',
-    'author': 'Tu Nombre',
+    'author': 'Andres Felipe Agiuilar Ruiz',
     'summary': 'Gestión de empleados con fotos de perfil',
     'description': 'Un módulo para administrar empleados con la opción de cambiar la foto de perfil.',
     'category': 'Human Resources',
